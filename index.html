@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("service_3pxdawo"); // Replace with your EmailJS user ID
+</script>
+
+<div id="cursor-glow"></div>
+
+
+</head>
+<body>
+<!-- Preloader -->
+<div id="preloader">
+  <h1 class="loader-text">Welcome to My Portfolio</h1>
+  <div class="loading-bar">
+    <div class="loading-fill"></div>
+  </div>
+</div>
+    <!-- ===== HEADER ===== -->
+    <header>
+    <nav>
+        <div class="logo">Hemalsha Adasooriya</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <!-- Floating Background Shapes -->
+<div class="bg-shape one"></div>
+<div class="bg-shape two"></div>
+<div class="bg-shape three"></div>
+
+
+
+    <!-- ===== HOME ===== -->
+    <section id="home" class="section home-section">
+        <div class="home-content">
+            <h1>Hello ,</h1>
+            <h1>I'm <span>Hemalsha Adasooriya</span></h1>
+            <p></p>
+            <button id="hireBtn">Contact Me</button>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+  <div class="about-box">
+    <div class="about-photo">
+      <img src="./1.JPG" alt="Hemalsha">
+    </div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Hemalsha, a passionate Software Engineering undergraduate of Sabaragamuwa University of sri Lanka. 
+        I enjoy solving problems through code, building efficient systems, and exploring innovative technologies.
+My goal is to combine my software engineering background with analytical skills to create impactful solutions, especially in the areas of AI-driven applications,
+ data analysis, and secure system design.I’m continuously learning, experimenting with new technologies, and working on projects that challenge my creativity and technical skills.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>E-Commerce Site</h3>
+                <img id="pro1" src="./2.jpg" alt="Project 1">
+                <p>Together with my batch mates, I developed Infinity Hub, a comprehensive e-commerce website that offers a seamless shopping experience. As the backend developer, I played a crucial role in bringing the project to life.
+                     The site features a range of standard e-commerce functionalities, allowing users to browse, select, and purchase products with ease.</p>
+            </div>
+            <div class="project-card">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out through social media or drop me a message 👇</p>
+
+    <div class="contact-content">
+      <!-- Left: Social Media -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1BAE3bafzi/" target="_blank">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+          <a href="https://wa.me/94766318401" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/hemalsha-adasooriya-04ba1a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://www.instagram.com/hemalsha_adasooriya?igsh=am05bXExOHZiODhx" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <form id="contactform" class="contactform">
+  <input type="text" name="from_name" placeholder="Your Name" required>
+  <input type="email" name="from_email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+
+    </div>
+  </div>
+</section>
+
+    <footer>
+  <div class="footer-container">
+    <h3>Hemalsha Adasooriya</h3>
+    <p>Passionate Software Engineer | Frontend Developer | Creative Coder</p>
+    
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/share/1BAE3bafzi/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/hemalsha-adasooriya-04ba1a323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/hemalsha_adasooriya?igsh=am05bXExOHZiODhx" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <p class="footer-copy">&copy; <span id="year"></span> Hemalsha Adasooriya. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
