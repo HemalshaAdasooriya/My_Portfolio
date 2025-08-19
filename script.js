@@ -9,16 +9,6 @@ window.addEventListener("load", () => {
     }, 2000);
 });
 
-// ===== Smooth Scroll =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
-
 // ===== Typing Effect =====
 const typingText = ["Software Engineer", "Frontend Developer", "UI/UX Designer"];
 let textIndex = 0;
@@ -72,31 +62,6 @@ document.querySelectorAll(".project-card").forEach(card => {
     });
 });
 
-// ===== ScrollReveal Popup Animations =====
-const sr = ScrollReveal({
-    duration: 1200,
-    distance: "40px",
-    easing: "ease-out",
-    opacity: 0,
-    reset: false,
-    scale: 0.8 // popup effect
-});
-
-// Home Section
-sr.reveal(".home-content", { origin: "top" });
-
-// About Section
-sr.reveal(".about-box", { origin: "bottom" });
-
-// Projects Section
-sr.reveal("#projects h2", { origin: "top" });
-sr.reveal(".project-card", { origin: "bottom", interval: 200, scale: 0.85 });
-
-// Contact Section
-sr.reveal(".contact-container h2", { origin: "top" });
-sr.reveal(".contact-container p", { origin: "top", delay: 200 });
-sr.reveal(".contact-info", { origin: "left", scale: 0.9 });
-sr.reveal(".contact-form", { origin: "right", scale: 0.9 });
 
 // ===== Dynamic Year =====
 document.querySelector("footer p").innerHTML =
@@ -122,21 +87,38 @@ document.querySelectorAll(".project-card").forEach(card => {
   });
 });
 
-// ===== Cursor Glow =====
-const cursorGlow = document.getElementById("cursor-glow");
-document.addEventListener("mousemove", e => {
-  cursorGlow.style.left = `${e.clientX}px`;
-  cursorGlow.style.top = `${e.clientY}px`;
+// ===== Scroll Reveal Animations =====
+const sr = ScrollReveal({
+  distance: "60px",
+  duration: 2000,
+  delay: 200,
+  reset: true // Animations repeat when you scroll back
 });
 
-// ===== Parallax Background Shapes =====
-const shapes = document.querySelectorAll(".bg-shape");
-document.addEventListener("mousemove", e => {
-  const x = (e.clientX / window.innerWidth) - 0.5;
-  const y = (e.clientY / window.innerHeight) - 0.5;
+// Home section
+sr.reveal(".home-content h1", { origin: "top" });
+sr.reveal(".home-content span", { origin: "left", delay: 300 });
+sr.reveal(".home-content p", { origin: "right", delay: 400 });
+sr.reveal(".home-content button", { origin: "bottom", delay: 500 });
 
-  shapes.forEach((shape, i) => {
-    const factor = (i + 1) * 15;
-    shape.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
-  });
+// About section
+sr.reveal(".about-photo", { origin: "left" });
+sr.reveal(".about-text", { origin: "right", delay: 300 });
+
+// Projects section
+sr.reveal("#projects h2", { origin: "top" });
+sr.reveal(".project-card", { origin: "bottom", interval: 200 });
+
+// Contact section
+sr.reveal("#contact h2", { origin: "top" });
+sr.reveal("#contact p", { origin: "bottom", delay: 200 });
+sr.reveal(".contact-info", { origin: "left", delay: 300 });
+sr.reveal(".contactform", { origin: "right", delay: 400 });
+
+// Skills Cards
+sr.reveal("#skills h2", { origin: "top" });
+sr.reveal(".skill-card", {
+  origin: "bottom",
+  interval: 200,
+  distance: "50px"
 });
