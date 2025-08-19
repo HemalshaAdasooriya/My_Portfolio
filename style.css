@@ -613,3 +613,51 @@ footer::before {
   margin-top: 15px;
   letter-spacing: 1px;
 }
+/* ===== SKILLS CARDS ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.skill-card i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--accent, #ff6ec4);
+  transition: transform 0.3s ease;
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ff6ec4;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.skill-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255,110,196,0.4);
+}
+
+.skill-card:hover i {
+  transform: rotate(10deg) scale(1.2);
+}
+
